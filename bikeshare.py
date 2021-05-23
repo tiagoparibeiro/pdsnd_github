@@ -127,8 +127,37 @@ def time_stats(df):
     # display the most common month
     month_mode = df['month'].mode()
     month_frequancy = df['month'].value_counts()
+    month_name = ''
 
-    print("Most common month for bike travels was {}".format(month_mode[0]))
+    #converting month int to string
+    if month_mode[0] == 1:
+        month_name = 'January'
+    elif month_mode[0] == 2:
+        month_name = 'Februar'
+    elif month_mode[0] == 3:
+        month_name = 'March'
+    elif month_mode[0] == 4:
+        month_name = 'April'
+    elif month_mode[0] == 5:
+        month_name = 'May'
+    elif month_mode[0] == 6:
+        month_name = 'June'
+    elif month_mode[0] == 7:
+        month_name = 'July'
+    elif month_mode[0] == 8:
+        month_name = 'August'
+    elif month_mode[0] == 9:
+        month_name = 'September'
+    elif month_mode[0] == 10:
+        month_name = 'October'
+    elif month_mode[0] == 11:
+        month_name = 'November'
+    elif month_mode[0] == 12:
+        month_name = 'December'
+
+
+
+    print("Most common month for bike travels was {}".format(month_name))
     ## debug ##
     #print("\n")
     #print("Getting Month Frequency to check result...")
@@ -138,8 +167,27 @@ def time_stats(df):
     # display the most common day of week
     day_of_week_mode = df['day_of_week'].mode()
     day_of_week_frequency = df['day_of_week'].value_counts()
+    day_of_week_name = ''
 
-    print("Most common day of the week for bike travels was {} (sunday = 0, saturday = 6)".format(day_of_week_mode[0]))
+    #converting day of the week number to name
+    if day_of_week_mode[0] == 0:
+        day_of_week_name = 'Sunday'
+    elif day_of_week_mode[0] == 1:
+        day_of_week_name = 'Monday'
+    elif day_of_week_mode[0] == 2:
+        day_of_week_name = 'Tuesday'
+    elif day_of_week_mode[0] == 3:
+        day_of_week_name = 'Wendsday'
+    elif day_of_week_mode[0] == 4:
+        day_of_week_name = 'Thursday'
+    elif day_of_week_mode[0] == 5:
+        day_of_week_name = 'Friday'
+    elif day_of_week_mode[0] == 6:
+        day_of_week_name = 'Saturday'
+    else:
+        day_of_week_name = 'error'
+    
+    print("Most common day of the week for bike travels was {}".format(day_of_week_name))
     ## debug ##
     #print("\n")
     #print("Getting Day of Week Frequency to check result...")
