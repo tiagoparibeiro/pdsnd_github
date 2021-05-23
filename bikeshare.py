@@ -127,8 +127,37 @@ def time_stats(df):
     # display the most common month
     month_mode = df['month'].mode()
     month_frequancy = df['month'].value_counts()
+    month_name = ''
 
-    print("Most common month for bike travels was {}".format(month_mode[0]))
+    #converting month int to string
+    if month_mode[0] == 1:
+        month_name = 'January'
+    elif month_mode[0] == 2:
+        month_name = 'Februar'
+    elif month_mode[0] == 3:
+        month_name = 'March'
+    elif month_mode[0] == 4:
+        month_name = 'April'
+    elif month_mode[0] == 5:
+        month_name = 'May'
+    elif month_mode[0] == 6:
+        month_name = 'June'
+    elif month_mode[0] == 7:
+        month_name = 'July'
+    elif month_mode[0] == 8:
+        month_name = 'August'
+    elif month_mode[0] == 9:
+        month_name = 'September'
+    elif month_mode[0] == 10:
+        month_name = 'October'
+    elif month_mode[0] == 11:
+        month_name = 'November'
+    elif month_mode[0] == 12:
+        month_name = 'December'
+
+
+
+    print("Most common month for bike travels was {}".format(month_name))
     ## debug ##
     #print("\n")
     #print("Getting Month Frequency to check result...")
