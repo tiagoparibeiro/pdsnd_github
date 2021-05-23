@@ -167,8 +167,27 @@ def time_stats(df):
     # display the most common day of week
     day_of_week_mode = df['day_of_week'].mode()
     day_of_week_frequency = df['day_of_week'].value_counts()
+    day_of_week_name = ''
 
-    print("Most common day of the week for bike travels was {} (sunday = 0, saturday = 6)".format(day_of_week_mode[0]))
+    #converting day of the week number to name
+    if day_of_week_mode[0] == 0:
+        day_of_week_name = 'Sunday'
+    elif day_of_week_mode[0] == 1:
+        day_of_week_name = 'Monday'
+    elif day_of_week_mode[0] == 2:
+        day_of_week_name = 'Tuesday'
+    elif day_of_week_mode[0] == 3:
+        day_of_week_name = 'Wendsday'
+    elif day_of_week_mode[0] == 4:
+        day_of_week_name = 'Thursday'
+    elif day_of_week_mode[0] == 5:
+        day_of_week_name = 'Friday'
+    elif day_of_week_mode[0] == 6:
+        day_of_week_name = 'Saturday'
+    else:
+        day_of_week_name = 'error'
+    
+    print("Most common day of the week for bike travels was {}".format(day_of_week_name))
     ## debug ##
     #print("\n")
     #print("Getting Day of Week Frequency to check result...")
