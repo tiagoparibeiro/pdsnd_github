@@ -7,7 +7,7 @@ May 23rd 2021
 Tiago's Bike Share Project
 
 ### Description
-Describe what your project is about and what it does
+In this project, we used Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. This script answers interesting questions about the bike share travels by computing descriptive statistics.
 
 ### Files used
 Include the files used
